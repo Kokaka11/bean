@@ -1,12 +1,16 @@
 :root {
     --btn-background: #f9c06a;
-    --btn-paddings: 14px 16px;
+    --btn-paddings: 14px 26px;
     --btn-color: #1e1e1e;
     --btn-radius: 24px;
 
     --line-height: 34px;
     --color-light: white;
     --color-dark: #707070;
+    --color-coffee: #603809;
+
+    --font-family-logo: "Clicker Script", cursive;
+    --font-text: 20px;
 }
 
 body {
@@ -26,6 +30,20 @@ body, * {
     margin: 0 auto;
 }
 
+.btn {
+    color:  var(--btn-color);
+    background-color: var(--btn-background);
+    border-radius: var(--btn-radius);
+    padding: var(--btn-paddings);
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.dark-heading {
+    color: var(--color-coffee);
+    font-size: 54px;
+}
+
 header {
     background-image: url(img/coffee_image.png);
     background-repeat: no-repeat;
@@ -33,7 +51,7 @@ header {
 }
 
 header .logo {
-    font-family: "Clicker Script", cursive;
+    font-family: var(--font-family-logo);
     font-weight: 400;
     font-style: normal;
     font-weight: 500;
@@ -91,15 +109,6 @@ header .login {
     text-decoration: underline;
 }
 
-.signup-btn {
-    color:  var(--btn-color);
-    background-color: var(--btn-background);
-    border-radius: var(--btn-radius);
-    padding: var(--btn-paddings);
-    display: inline-block;
-    transition: 0.3s;
-}
-
 .btn-hover:hover {
     box-shadow: 0 0 10px 2px #666;
 }
@@ -110,17 +119,21 @@ header .login {
     padding-bottom: 95px;
 }
 
-.hero .label,
-.hero .desctiption {
+.hero .label {
     color: var(--color-light);
     font-size: 22px;
-    border: 2px solid yellow;
+}
+
+.hero .desctiption {
+    color: var(--color-light);
+    font-size: var(--font-text);
 }
 
 .hero .title {
     color: var(--color-light);
-    font-family: "Clicker Script", cursive;
+    font-family: var(--font-family-logo);
     font-size: 220px;
+    font-weight: normal;
 }
 
 .hero .desctiption {
@@ -128,11 +141,25 @@ header .login {
 }
 
 .order-btn {
-    background-color: var(--btn-background);
-    padding: var(--btn-paddings);
-    color: var(--btn-color);
-    border-radius: var(--btn-radius);
-    font-weight: bold;
-    display: inline-block;
     margin-top: 20px;
 }
+
+.advantages {
+    padding-bottom: 130px;
+    padding-top: 70px;
+}
+
+.advantages p {
+    margin: 29px 0;
+    color: var(--color-dark);
+    font-size: var(--font-text);
+    line-height: var(--line-height);
+}
+
+.advantages .desctiption {
+    width: 585px;
+    display: inline-block;
+    margin-right: 80px;
+    vertical-align: 60px;
+}
+
